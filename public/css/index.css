@@ -1,0 +1,113 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100&display=swap');
+body {
+
+min-height: 100vh;
+
+font-family: 'Poppins', sans-serif;
+display: flex;
+flex-wrap: wrap;
+justify-content: space-evenly;
+background-color: #f9f9f9;
+align-items: center;
+}
+.video {
+    margin-top: 20px;
+    width: 700px;
+    height: 450px;
+    background-color: white;
+    border-radius: 15px;
+}
+video {
+    width: 100%;
+    height: 100%;
+}
+.btn-start {
+    outline:none;
+    border: none;
+    padding: 0.7rem 1.5rem;
+    border-radius: 10px;
+    background-color: blueviolet;
+    color: white;
+    font-weight: 500;
+    cursor: pointer;
+
+}
+.btn-stop {
+    border: none;
+    cursor: pointer;
+    outline: none;
+    margin-left: 10px;
+    border-radius: 10px;
+    font-weight: 500;
+    outline:none;
+    padding: 0.7rem 1.5rem;
+    color: white;
+    background-color: red;
+
+}
+#play-frame {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: -5;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+}
+.show {
+    background-image: linear-gradient(to right top, #0f1e34, #062d3a, #1a3a3a, #35463b, #4e5043);
+    z-index: 22;
+}
+
+#play {
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 90%;
+    height: 90%;
+}
+
+@media only screen and (max-width: 800px) and (orientation:landscape) {
+   .btn-start {
+       display: none;
+   }
+   .btn-stop {
+       display: none;
+   }
+   #play-frame {
+       width: 100vw;
+       height: 100vh;
+   }
+   #play {
+       width: 100%;
+       height: 100%;
+       background-size:cover
+   }
+   .video {
+       display: none;
+   }
+  
+
+    }
+    @media only screen and (max-width: 800px) and (orientation:portrait) {
+        .btn-start {
+            display: none;
+        }
+        .btn-stop {
+            display: none;
+        }
+       
+        #play {
+            width: 100%;
+            margin-top: 300px;
+            background-size: contain;
+        }
+        .video {
+            display: none;
+        }
+       
+     
+         }
