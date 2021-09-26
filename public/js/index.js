@@ -14,7 +14,7 @@ context.width = canvas.width
 context.height = canvas.height
 function viewVideo (video,context) {
     context.drawImage(video,0,0,canvas.width,canvas.height)
-    socket.emit('videoStream',canvas.toDataURL('image/jpg'))
+    socket.emit('videoStream',canvas.toDataURL('image/webp'))
 }
 
 async function startScreenShare () {
